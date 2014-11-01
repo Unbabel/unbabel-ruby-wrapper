@@ -1,4 +1,4 @@
-# Unbabel API Wrapper
+# Unbabel Ruby Wrapper
 
 
 # Configuration
@@ -23,7 +23,7 @@ client.topics
 ```
 
 
-# Methods available
+# Methods soon available
 
 ```ruby
 client.topics
