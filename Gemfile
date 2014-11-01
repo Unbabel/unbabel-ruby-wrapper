@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 ruby '2.1.3'
-gem 'httparty'
+gem 'faraday'
+gem 'http'
 
 group :test do
   gem 'pry'
