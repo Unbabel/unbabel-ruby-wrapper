@@ -11,3 +11,25 @@ client = Unbabel::Client.new do |conf|
 end
 
 ```
+
+# Usage
+
+### Request Topics
+
+```ruby
+
+client.topics
+
+```
+
+
+# Methods available
+
+```ruby
+client.topics
+client.tones
+client.language_pairs
+client.translations           # lists listranstions
+client.translations.find(uid) # queries a translation
+client.translations.new()     # request new translation
+```
