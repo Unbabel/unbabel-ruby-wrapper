@@ -1,7 +1,11 @@
 # Unbabel Ruby Wrapper
 
+[Unbabel](https://unbabel.com/) is a translation as a service, this is a ruby wrapper around their [API](https://github.com/Unbabel/unbabel_api).
 
-# Configuration
+Happy Translations!
+
+
+## Configuration
 
 ```ruby
 
@@ -12,24 +16,25 @@ end
 
 ```
 
-# Usage
-
-### Request Topics
+## Available methods
 
 ```ruby
-
-client.topics
-
+client.language_pairs           # lists available language pairs
+client.topics                   # lists available topics
+client.tones                    # lists available tones
+client.translations             # lists translations
+client.translations.find(uid)   # finds a translation by unique id
+client.translations.request     # requests a new translation
 ```
 
+## Available soon
 
-# Methods soon available
+- Ability of bulk request translations
 
-```ruby
-client.topics
-client.tones
-client.language_pairs
-client.translations           # lists listranstions
-client.translations.find(uid) # queries a translation
-client.translations.new()     # request new translation
-```
+## Contributing
+
+1. Fork it ( https://github.com/davidslv/unbabel-ruby-wrapper/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
