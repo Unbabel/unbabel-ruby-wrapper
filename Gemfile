@@ -1,12 +1,10 @@
 source 'https://rubygems.org'
 
-ruby '2.1.3'
-gem 'unirest'
+gemspec
 
 group :test do
   gem 'pry'
   gem 'pry-nav'
   gem 'rspec'
   gem 'webmock'
-  # gem 'vcr'
 end
