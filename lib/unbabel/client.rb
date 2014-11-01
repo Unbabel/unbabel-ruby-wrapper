@@ -1,6 +1,10 @@
+require './lib/unbabel/topic'
+
 module Unbabel
   class Client
-    ENDPOINT = 'https://unbabel.com/tapi/v2'
+    include Unbabel::Topic
+    SANDBOX  = 'http://sandbox.unbabel.com/tapi/v2'
+    ENDPOINT = SANDBOX # 'https://unbabel.com/tapi/v2'
     attr_accessor :username, :token
 
 
@@ -10,6 +14,8 @@ module Unbabel
 
       yield(self) if block_given?
       validate_credentials!
+      Unirest.default_header('Content-Type', 'application/json')
+      Unirest.default_header('Authorization', "ApiKey #{@username}:#{@token}")
     end
 
     def credentials
