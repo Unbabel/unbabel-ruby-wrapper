@@ -5,8 +5,9 @@ require './lib/unbabel/translation'
 
 module Unbabel
   class Client
-    SANDBOX  = 'http://sandbox.unbabel.com/tapi/v2'
-    ENDPOINT = SANDBOX # 'https://unbabel.com/tapi/v2'
+    TEST_MODE = ENV['SANDBOX'] == true
+    SANDBOX   = 'http://sandbox.unbabel.com/tapi/v2'
+    ENDPOINT  = TEST_MODE ? SANDBOX : 'https://unbabel.com/tapi/v2'
 
     include Unbabel::LanguangePair
     include Unbabel::Topic
