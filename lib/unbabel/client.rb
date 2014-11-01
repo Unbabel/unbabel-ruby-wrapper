@@ -1,8 +1,12 @@
 require './lib/unbabel/topic'
+require './lib/unbabel/tone'
+
 
 module Unbabel
   class Client
     include Unbabel::Topic
+    include Unbabel::Tone
+
     SANDBOX  = 'http://sandbox.unbabel.com/tapi/v2'
     ENDPOINT = SANDBOX # 'https://unbabel.com/tapi/v2'
     attr_accessor :username, :token
