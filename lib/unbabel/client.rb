@@ -1,15 +1,17 @@
 require './lib/unbabel/topic'
 require './lib/unbabel/tone'
 require './lib/unbabel/language_pair'
+require './lib/unbabel/translation'
 
 module Unbabel
   class Client
     SANDBOX  = 'http://sandbox.unbabel.com/tapi/v2'
     ENDPOINT = SANDBOX # 'https://unbabel.com/tapi/v2'
 
+    include Unbabel::LanguangePair
     include Unbabel::Topic
     include Unbabel::Tone
-    include Unbabel::LanguangePair
+    include Unbabel::Translation
 
     attr_accessor :username, :token
 
