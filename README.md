@@ -35,6 +35,13 @@ client.translations.find(uid)   # finds a translation by unique id
 client.translations.request     # requests a new translation
 ```
 
+### Sample
+
+```
+irb(main):009:0> client.topics
+=> [{"topic"=>{"name"=>"politics"}}, {"topic"=>{"name"=>"gossip"}}, {"topic"=>{"name"=>"sex & relationships"}}, {"topic"=>{"name"=>"crafts"}}, {"topic"=>{"name"=>"parenting"}}, {"topic"=>{"name"=>"startups"}}, {"topic"=>{"name"=>"tech"}}, {"topic"=>{"name"=>"sports"}}]
+```
+
 ## Available soon
 
 - Ability of bulk request translations
