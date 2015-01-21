@@ -1,4 +1,5 @@
 require 'unbabel/version'
+require 'unirest'
 
 module Unbabel
   require 'unbabel/language_pair'
