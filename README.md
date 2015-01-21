@@ -16,6 +16,14 @@ end
 
 ```
 
+# Sandbox mode
+
+If you want to help developing this library user the following ENV variable.
+
+```shell
+export UNBABEL_SANDBOX="true"
+```
+
 ## Available methods
 
 ```ruby

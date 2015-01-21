@@ -1,5 +1,9 @@
-require "unbabel/version"
+require 'unbabel/version'
 
 module Unbabel
-  # Your code goes here...
+  require 'unbabel/language_pair'
+  require 'unbabel/tone'
+  require 'unbabel/topic'
+  require 'unbabel/translation'
+  require 'unbabel/client'
 end

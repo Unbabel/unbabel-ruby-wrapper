@@ -5,7 +5,7 @@ require './lib/unbabel/translation'
 
 module Unbabel
   class Client
-    TEST_MODE = ENV['SANDBOX'] == true
+    TEST_MODE = ENV['UNBABEL_SANDBOX'] == 'true'
     SANDBOX   = 'http://sandbox.unbabel.com/tapi/v2'
     ENDPOINT  = TEST_MODE ? SANDBOX : 'https://unbabel.com/tapi/v2'
 
