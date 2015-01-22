@@ -23,5 +23,5 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 1.9.3'
   spec.add_development_dependency "rspec", '~> 3.1', '>= 3.1.0'
 
-  spec.add_dependency "unirest", "~> 1.1.2"
+  spec.add_runtime_dependency 'unirest', '~> 1.1', '>= 1.1.2'
 end

@@ -1,8 +1,3 @@
-require './lib/unbabel/topic'
-require './lib/unbabel/tone'
-require './lib/unbabel/language_pair'
-require './lib/unbabel/translation'
-
 module Unbabel
   class Client
     TEST_MODE = ENV['UNBABEL_SANDBOX'] == 'true'
