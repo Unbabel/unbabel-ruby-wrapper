@@ -27,19 +27,50 @@ export UNBABEL_SANDBOX="true"
 ## Available methods
 
 ```ruby
-client.language_pairs           # lists available language pairs
-client.topics                   # lists available topics
-client.tones                    # lists available tones
-client.translations             # lists translations
-client.translations.find(uid)   # finds a translation by unique id
-client.translations.request     # requests a new translation
+client.language_pairs              # lists all available language pairs
+client.topics                      # lists all available topics
+client.tones                       # lists all available tones
+client.find(uid)                   # finds a translation by unique id
+client.translations                # lists all translations
+client.translations(status)        # lists translations in a given status
+client.request_translation(params) # requests a new translation
 ```
 
-### Sample
+### Translation Statuses
 
 ```
-irb(main):009:0> client.topics
+'new'         - The translation has been created and is being pre-processed
+'ready'       - The translation is ready to be processed in the unbabel platform.
+'in_progress' - The translation is being executed
+'delivered'   - The translation has already been returned to the client (either using the endpoint or query for a translation)
+```
+
+### Request Translation
+
+You will need the following to perform a translation request
+
+```
+text (required)            - the text to be translated.
+target_language (required) - the language to translate the text to.
+source_language            - the language of text. If not supplemented it will be auto detected from the text.
+text_format                - The format of the text to be translated [one of text,html].
+target_text                - initial version of the text to be post-edited.
+uid                        - A unique identifier for the job. If one is not supplied the system will provide one.
+callback_url               - Once the job is done the result will be posted to this endpoint.
+formality (optional)       - The tone that should be used in the translation.
+instructions (optional)    - Client instructions for the translator.
+topics (optional)          - List of the topics of text.
+```
+
+### Usage samples
+
+```
+irb> client.topics
 => [{"topic"=>{"name"=>"politics"}}, {"topic"=>{"name"=>"gossip"}}, {"topic"=>{"name"=>"sex & relationships"}}, {"topic"=>{"name"=>"crafts"}}, {"topic"=>{"name"=>"parenting"}}, {"topic"=>{"name"=>"startups"}}, {"topic"=>{"name"=>"tech"}}, {"topic"=>{"name"=>"sports"}}]
+
+irb> params = {:text=>"unbabel rules!", :target_language=>"pt", :source_language=>"en"}
+irb> client.request(params)
+=> {"balance"=>982.0, "client"=>"davidslv", "price"=>6.0, "source_language"=>"en", "status"=>"new", "target_language"=>"pt", "text"=>"unbabel rules!", "text_format"=>"text", "uid"=>"dbd3fea5b5"}
 ```
 
 ## Available soon
