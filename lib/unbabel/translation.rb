@@ -17,7 +17,7 @@ module Unbabel
     # formality (optional)       - The tone that should be used in the translation.
     # instructions (optional)    - Client instructions for the translator.
     # topics (optional)          - List of the topics of text.
-    def request(params = {})
+    def request_translation(params = {})
       response = Unirest.post("#{Unbabel::Client::ENDPOINT}/translation/",
                         parameters: params.to_json)
       response.body
@@ -29,7 +29,7 @@ module Unbabel
     # 'in_progress' - The translation is being executed
     # 'delivered'   - The translation has already been returned to the client (either using the endpoint or query for a translation)
     def translations(status = nil)
-      status = "?#{status}" if status
+      status = "?status=#{status}" if status
 
       response = Unirest.get("#{Unbabel::Client::ENDPOINT}/translation/#{status}")
       response.body['objects']
