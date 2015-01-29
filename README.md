@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Davidslv/unbabel-ruby-wrapper.svg)](https://travis-ci.org/Davidslv/unbabel-ruby-wrapper)
+
 # Unbabel Ruby Wrapper
 
 [Unbabel](https://unbabel.com/) is a translation as a service, this is a ruby wrapper around their [API](https://github.com/Unbabel/unbabel_api).
