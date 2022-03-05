@@ -1,6 +1,8 @@
-[![Build Status](https://travis-ci.org/Davidslv/unbabel-ruby-wrapper.svg)](https://travis-ci.org/Davidslv/unbabel-ruby-wrapper)
-
 # Unbabel Ruby Wrapper
+
+[![Project Status: Abandoned – Initial development has started, but there has not yet been a stable, usable release; the project has been abandoned and the author(s) do not intend on continuing development.](https://www.repostatus.org/badges/latest/abandoned.svg)](https://www.repostatus.org/#abandoned)
+
+[![Build Status](https://travis-ci.org/Davidslv/unbabel-ruby-wrapper.svg)](https://travis-ci.org/Davidslv/unbabel-ruby-wrapper)
 
 [Unbabel](https://unbabel.com/) is a translation as a service, this is a ruby wrapper around their [API](https://github.com/Unbabel/unbabel_api).
 
